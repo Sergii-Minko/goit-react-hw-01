@@ -1,20 +1,23 @@
 import "./App.css";
-import Product from "./Product";
+import { Profile } from "./Profile/Profile";
+import { FriendList } from "./FriendList/FriendList";
+import userData from "../Data/userData.json";
+import friends from "../Data/friends.json";
+import transactions from "../Data/transactions.json";
+import { TransactionHistory } from "./Transactions/Transactions";
+
 export default function App() {
   return (
-    <div>
-      <h1>Best selling</h1>
-
-      <Product
-        name="Tacos With Lime"
-        imgUrl="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?dpr=2&h=480&w=640"
-        price={10.99}
+    <>
+      <Profile
+        username={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        avatar={userData.avatar}
+        stats={userData.stats}
       />
-      <Product
-        name="Fries and Burger"
-        imgUrl="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?dpr=2&h=480&w=640"
-        price={14.29}
-      />
-    </div>
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
+    </>
   );
 }
