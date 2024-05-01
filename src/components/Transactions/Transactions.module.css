@@ -1,22 +1,22 @@
-table {
+.table {
   border: 1px solid #000000;
   width: 690px;
   border-spacing: 0;
 }
 
-thead {
+.thead {
   width: inherit;
   background-color: #2a2a2a;
 }
-thead tr {
+.thead tr {
   padding: 10px;
 }
-table th {
+.table th {
   font-weight: 600;
   font-size: 20px;
   color: #ffffff;
 }
-table td {
+.table td {
   padding: 10px 0 10px 0;
   width: 230px;
   font-weight: 700;
@@ -28,7 +28,7 @@ table td {
   border: 1px solid #000000;
 }
 
-table tr {
+.table tr {
   display: flex;
   justify-content: space-around;
   border-bottom: solid 1px #000000;

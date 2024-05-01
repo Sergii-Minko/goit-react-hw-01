@@ -1,4 +1,4 @@
-import "./Transactions.module.css";
+import css from "./Transactions.module.css";
 import PropTypes from "prop-types";
 let BGcolor = false;
 const Color = () => {
@@ -8,8 +8,8 @@ const Color = () => {
 
 export const TransactionHistory = ({ items }) => {
   return (
-    <table>
-      <thead>
+    <table className={css.table}>
+      <thead className={css.thead}>
         <tr>
           <th>Type</th>
           <th>Amount</th>
